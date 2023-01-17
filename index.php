@@ -1,11 +1,19 @@
-<?php
-print("_SERVER['PHP_SELF'] = ".$_SERVER['PHP_SELF']);
-print("<br/><br/>");
-print("_SERVER['SERVER_NAME'] = ".$_SERVER['SERVER_NAME']);
-print("<br/><br/>");
-print("_SERVER['HTTP_HOST'] = ".$_SERVER['HTTP_HOST']);
-print("<br/><br/>");
-print("_SERVER['HTTP_USER_AGENT'] = ".$_SERVER['HTTP_USER_AGENT']);
-print("<br/><br/>");
-print("_SERVER['SCRIPT_NAME'] = ".$_SERVER['SCRIPT_NAME']);
-
+<HTML>
+<head>
+    <title>Formulaire</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form method="POST" action="<?php print(htmlspecialchars($_SERVER["PHP_SELF"]))?>">
+        Name :      <input type="text" name="name"><br><br>
+        E-mail :     <input type="text" name="email"><br><br>
+        Website :   <input type="text" name="email"><br><br>
+        Comment :   <textarea name="email" rows=5 cols=40></textarea><br><br>
+        Gender :    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="Other"> Other <br><br>
+                    <input type="submit">
+        
+    </form>
+</body>
+</HTML> 
